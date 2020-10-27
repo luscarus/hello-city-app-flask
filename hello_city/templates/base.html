@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>{% block title %}Hello City{% endblock %}</title>
+		{% block stylesheets %}
+			<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+		{% endblock %}
+	</head>
+	<body class="flex flex-col justify-between justify-center items-center min-h-screen">
+		<main role="main" class="my-6 flex flex-col items-center justify-center">
+			{% block body %}{% endblock %}
+		</main>
+
+		<footer class="my-6">
+			<p class="text-gray-400">
+				&copy; Copyright {{ date.strftime("%Y")}} &middot; <a href="{{ url_for('about') }}" class="text-indigo-500 hover:text-indigo-600 underline">About Us</a> 
+			</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Hello City!{% endblock %}
+{% block body %}
+	<img src="{{ url_for('static', filename='images/Quebec_flag.png') }}" alt="Quebec Flag" width="200" height="200" class="h-32 mt-12 rounded shadow-md">
+
+	<h1 class="mt-5 text-3xl sm:text-5xl font-semibold text-indigo-600">Hello from Quebec!</h1>
+
+	<p class="text-lg text-gray-800">It's currently {{ date.strftime("%H:%M") }}.</p>
+
+{% endblock %} 
